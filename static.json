@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/js/(.*)",
+      "headers": {
+        "Content-Type": "application/javascript"
+      },
+      "dest": "/js/$1"
+    }
+  ]
+}
