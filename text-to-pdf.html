@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to PDF Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Text to PDF</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#generator">Generator</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="generator-section" id="generator">
+      <h1>Generate PDF from Text</h1>
+      <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+      <div class="btn-group">
+        <button id="generateBtn">Generate PDF</button>
+        <button id="clearText">Clear</button>
+      </div>
+
+      <div class="pdf-preview-container" id="previewContainer" style="display: none;">
+        <h2>PDF Preview:</h2>
+        <iframe id="pdfPreview" width="100%" height="400px"></iframe>
+        <button id="downloadPdf">Download PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="about-section" id="about">
+    <h2>About</h2>
+    <p>This tool allows you to write or paste text and generate a downloadable PDF file with preview—all in your browser.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Text to PDF Generator. Built by Ayan Ansari.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

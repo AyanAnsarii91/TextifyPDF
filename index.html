@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="A free online tool to convert PDF files into text format directly in your browser with ease." />
-    <meta name="keywords" content="PDF, text converter, PDF to text, online PDF conversion, free tool, PDF.js" />
+    <meta name="description" content="A free tool to convert PDF files to text in your browser." />
+    <meta name="keywords" content="PDF, text converter, online tool, PDF.js" />
     <meta name="author" content="Ayan Ansari" />
     <meta property="og:title" content="PDF to Text Converter" />
-    <meta property="og:description"
-        content="A free online tool to convert PDF files into text format directly in your browser." />
+    <meta property="og:description" content="Convert PDF to text easily using PDF.js in the browser." />
     <meta property="og:image" content="path-to-your-image.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com/pdf-to-text-converter" />
+    <meta property="og:url" content="https://textifypdf.onrender.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PDF to Text Converter" />
-    <meta name="twitter:description" content="Convert PDF to text online for free with PDF.js." />
+    <meta name="twitter:description" content="Extract text from PDF files directly in your browser." />
     <meta name="twitter:image" content="path-to-your-image.jpg" />
-    <title>PDF to Text Converter</title>
+    <title id="dynamicTitle">PDF to Text Converter</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -36,29 +36,43 @@
     <main id="home">
         <section class="converter-section" id="converter">
             <h1>Convert PDF to Text</h1>
-            <!-- <input type="file" id="pdfUpload" accept="application/pdf" /> -->
             <div class="file-upload-container">
                 <input type="file" id="pdfUpload" accept="application/pdf" />
                 <label for="pdfUpload" class="custom-file-upload">Choose PDF</label>
             </div>
 
+            <div id="spinner" class="spinner" style="display: none;"></div>
+
             <button id="convertBtn">Convert to Text</button>
+
+
             <textarea id="outputText" placeholder="Extracted text will appear here..." readonly></textarea>
-            <button id="removeText">Remove Text</button>
+
+            <div class="btn-group">
+                <button id="copyText">Copy Text</button>
+                <button id="removeText">Remove Text</button>
+            </div>
+            <div class="btn-group">
+                <a href="text-to-pdf.html" class="redirect-btn">Switch to Text → PDF</a>
+            </div>
+
+
         </section>
     </main>
 
     <section class="about-section" id="about">
         <h2>About</h2>
-        <p>This tool uses PDF.js to extract text content from PDF files directly in your browser.</p>
+        <p>This tool uses PDF.js to extract text content from PDF files directly in your browser. No server uploads.
+            Safe, free, and fast.</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 PDF to Text Converter. All rights reserved.</p>
+        <p>&copy; 2025 PDF to Text Converter. Built by Ayan Ansari.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
-    <script src="index.js"></script>
+
 </body>
+<script src="index.js"></script>
 
 </html>
